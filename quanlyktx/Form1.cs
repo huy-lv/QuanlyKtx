@@ -29,5 +29,6 @@ namespace quanlyktx
             pnMain.Visible = true;
             btDangNhap.Visible = false;
         }
+
     }
 }
