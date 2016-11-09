@@ -24,8 +24,10 @@ namespace quanlyktx
 
         private void doLogin()
         {
-            if (tbUsername.Text == "admin" && tbPassword.Text == "admin")
+            if (tbUsername.Text == "a" && tbPassword.Text == "a")
             {
+                Program.LOGGED_IN = true;
+                Program.form1.afterLoggedIn();
                 Close();
             }
             else

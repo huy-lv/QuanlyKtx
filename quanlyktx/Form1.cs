@@ -17,10 +17,17 @@ namespace quanlyktx
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btDangNhap_Click(object sender, EventArgs e)
         {
-            LoginDialog loginDialog = new LoginDialog();
-            loginDialog.ShowDialog();
+            //LoginDialog loginDialog = new LoginDialog();
+            //loginDialog.ShowDialog();
+            afterLoggedIn();
+        }
+
+        public void afterLoggedIn()
+        {
+            pnMain.Visible = true;
+            btDangNhap.Visible = false;
         }
     }
 }
