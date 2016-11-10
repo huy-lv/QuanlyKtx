@@ -8,3 +8,4 @@ c:\users\huylv\documents\visual studio 2015\Projects\ktx\quanlyktx\obj\Debug\qua
 c:\users\huylv\documents\visual studio 2015\Projects\ktx\quanlyktx\obj\Debug\quanlyktx.exe
 c:\users\huylv\documents\visual studio 2015\Projects\ktx\quanlyktx\obj\Debug\quanlyktx.pdb
 c:\users\huylv\documents\visual studio 2015\Projects\ktx\quanlyktx\obj\Debug\quanlyktx.LoginDialog.resources
+C:\Users\huylv\documents\visual studio 2015\Projects\ktx\quanlyktx\obj\Debug\quanlyktx.AddDialog.resources

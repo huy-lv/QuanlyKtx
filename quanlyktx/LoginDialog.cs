@@ -24,6 +24,8 @@ namespace quanlyktx
 
         private void doLogin()
         {
+
+
             if (tbUsername.Text == "a" && tbPassword.Text == "a")
             {
                 Program.LOGGED_IN = true;
@@ -34,13 +36,7 @@ namespace quanlyktx
             {
                 string message = "Wrong user name or password!";
                 string title = "Error";
-                MessageBoxButtons buttons = MessageBoxButtons.OK;
-                DialogResult result;
-                result = MessageBox.Show(message, title, buttons);
-                if (result == System.Windows.Forms.DialogResult.OK)
-                {
-                    this.Close();
-                }
+                Utils.showOkDialog(title, message);
             }
         }
 
