@@ -103,7 +103,7 @@
             // 
             // add_btThem
             // 
-            this.add_btThem.Location = new System.Drawing.Point(217, 231);
+            this.add_btThem.Location = new System.Drawing.Point(264, 229);
             this.add_btThem.Name = "add_btThem";
             this.add_btThem.Size = new System.Drawing.Size(75, 23);
             this.add_btThem.TabIndex = 22;
@@ -290,7 +290,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button add_btThem;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -313,5 +312,6 @@
         public System.Windows.Forms.TextBox add_tbHoTen;
         public System.Windows.Forms.DateTimePicker add_dtpNgayDK;
         public System.Windows.Forms.DateTimePicker add_dtpNgaySinh;
+        public System.Windows.Forms.Button add_btThem;
     }
 }

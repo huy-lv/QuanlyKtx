@@ -12,11 +12,13 @@ namespace quanlyktx
 {
     public partial class AddDialog : Form
     {
-        
+        public bool isEditing { get; set; }
+
         public AddDialog()
         {
             InitializeComponent();
         }
+
 
         private void add_btThem_Click(object sender, EventArgs e)
         {
@@ -32,20 +34,37 @@ namespace quanlyktx
                     add_tbHoKhau.Text != "" &&
                     add_tbGioiTinh.Text != "")
             {
-                Program.form1.addSv(add_tbMaSinhVien.Text,
-                add_tbHoTen.Text,
-                add_tbMaPhong.Text,
-                add_tbHoKhau.Text,
-                add_tbGioiTinh.Text,
-                add_dtpNgaySinh.Value.Date,
-                add_dtpNgayDK.Value.Date,
-                add_tbTrangThai.Text,
-                add_tbSdt.Text,
-                add_tbThoiGianHoc.Text,
-                add_tbTenLop.Text
-                );
-                Console.WriteLine("cxz:" + add_dtpNgaySinh.Value.Date);
+                if (isEditing)
+                {
+                    Program.form1.editSv(add_tbMaSinhVien.Text,
+                     add_tbHoTen.Text,
+                     add_tbMaPhong.Text,
+                     add_tbHoKhau.Text,
+                     add_tbGioiTinh.Text,
+                     add_dtpNgaySinh.Value.Date,
+                     add_dtpNgayDK.Value.Date,
+                     add_tbTrangThai.Text,
+                     Convert.ToInt32(add_tbSdt.Text),
+                     add_tbThoiGianHoc.Text,
+                     add_tbTenLop.Text);
+                }
+                else
+                {
+                    Program.form1.addSv(add_tbMaSinhVien.Text,
+                     add_tbHoTen.Text,
+                     add_tbMaPhong.Text,
+                     add_tbHoKhau.Text,
+                     add_tbGioiTinh.Text,
+                     add_dtpNgaySinh.Value.Date,
+                     add_dtpNgayDK.Value.Date,
+                     add_tbTrangThai.Text,
+                     Convert.ToInt32(add_tbSdt.Text),
+                     add_tbThoiGianHoc.Text,
+                     add_tbTenLop.Text
+                     );
+                }
                 this.Close();
+
             }
             else
             {
@@ -53,18 +72,6 @@ namespace quanlyktx
             }
         }
 
-        private void add_tbNgaySinh_Click(object sender, EventArgs e)
-        {
-            DateTimePicker dtp = new DateTimePicker();
-            Form dtpForm = new Form();
-
-            dtpForm.Controls.Add(dtp);
-            var result = dtpForm.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                Console.Write("cxz");
-            }
-        }
 
     }
 }

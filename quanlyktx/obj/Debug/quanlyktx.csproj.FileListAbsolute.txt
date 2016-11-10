@@ -9,3 +9,17 @@ c:\users\huylv\documents\visual studio 2015\Projects\ktx\quanlyktx\obj\Debug\qua
 c:\users\huylv\documents\visual studio 2015\Projects\ktx\quanlyktx\obj\Debug\quanlyktx.pdb
 c:\users\huylv\documents\visual studio 2015\Projects\ktx\quanlyktx\obj\Debug\quanlyktx.LoginDialog.resources
 C:\Users\huylv\documents\visual studio 2015\Projects\ktx\quanlyktx\obj\Debug\quanlyktx.AddDialog.resources
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\bin\Debug\quanlyktx.exe.config
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.exe
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.pdb
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\bin\Debug\quanlyktx.exe
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\bin\Debug\quanlyktx.pdb
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.csprojResolveAssemblyReference.cache
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.AddDialog.resources
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.Form1.resources
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.Properties.Resources.resources
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.csproj.GenerateResource.Cache
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\bin\Debug\EntityFramework.dll
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\bin\Debug\EntityFramework.xml
+C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\bin\Debug\EntityFramework.SqlServer.xml
