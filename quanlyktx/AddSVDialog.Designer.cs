@@ -1,6 +1,6 @@
 ﻿namespace quanlyktx
 {
-    partial class AddDialog
+    partial class AddSVDialog
     {
         /// <summary>
         /// Required designer variable.

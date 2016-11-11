@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNVDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNVDialog.Designer.cs">
+      <DependentUpon>AddNVDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBKyTucXa.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -68,16 +74,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddDialog.cs">
+    <Compile Include="AddSVDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddDialog.Designer.cs">
-      <DependentUpon>AddDialog.cs</DependentUpon>
+    <Compile Include="AddSVDialog.Designer.cs">
+      <DependentUpon>AddSVDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddDialog.resx">
-      <DependentUpon>AddDialog.cs</DependentUpon>
+    <EmbeddedResource Include="AddNVDialog.resx">
+      <DependentUpon>AddNVDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSVDialog.resx">
+      <DependentUpon>AddSVDialog.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DBKyTucXa.dbml.layout">
       <DependentUpon>DBKyTucXa.dbml</DependentUpon>

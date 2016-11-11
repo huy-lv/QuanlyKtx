@@ -9,6 +9,10 @@ namespace quanlyktx
 {
     static class Utils
     {
+        public static string TITLE_ERROR = "Lỗi";
+        public static string TITLE_INFO = "Thông báo";
+
+
         public static void showOkDialog(string title,string message)
         {
             MessageBoxButtons buttons = MessageBoxButtons.OK;

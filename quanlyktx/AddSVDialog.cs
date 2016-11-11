@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace quanlyktx
 {
-    public partial class AddDialog : Form
+    public partial class AddSVDialog : Form
     {
         public bool isEditing { get; set; }
 
-        public AddDialog()
+        public AddSVDialog()
         {
             InitializeComponent();
         }
@@ -68,7 +68,7 @@ namespace quanlyktx
             }
             else
             {
-                Utils.showOkDialog("Lỗi", "Vui lòng nhập đầy đủ thông tin!");
+                Utils.showOkDialog(Utils.TITLE_ERROR, "Vui lòng nhập đầy đủ thông tin!");
             }
         }
 
