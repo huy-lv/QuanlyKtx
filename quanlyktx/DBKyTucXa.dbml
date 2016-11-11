@@ -193,4 +193,141 @@
       <Column Name="ghichu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.sinhvien_searchbyname" Method="sinhvien_searchbyname">
+    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sinhvien_searchbynameResult">
+      <Column Name="masv" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hoten" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="maphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hokhau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gioitinh" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ngaysinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ngaydangky" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="trangthai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sdt" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="thoigianhoc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="lop" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sinhvien_selectbyname" Method="sinhvien_selectbyname">
+    <Parameter Name="hoten" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sinhvien_selectbynameResult">
+      <Column Name="masv" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hoten" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="maphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hokhau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gioitinh" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ngaysinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ngaydangky" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="trangthai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sdt" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="thoigianhoc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="lop" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sinhvien_selectbymaphong" Method="sinhvien_selectbymaphong">
+    <Parameter Name="maphong" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sinhvien_selectbymaphongResult">
+      <Column Name="masv" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hoten" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="maphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hokhau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gioitinh" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="ngaysinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ngaydangky" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="trangthai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sdt" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="thoigianhoc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="lop" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.phong_delete" Method="phong_delete">
+    <Parameter Name="maphong" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.phong_update" Method="phong_update">
+    <Parameter Name="maphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tenphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="matang" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maloaiphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="slmax" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sldango" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sodienthangtruoc" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sodienthangsau" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sonuocthangtruoc" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sonuocthangsau" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sltaisan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tinhtrang" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gioitinh" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.phong_insert" Method="phong_insert">
+    <Parameter Name="maphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tenphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="matang" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maloaiphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="slmax" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sldango" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sodienthangtruoc" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sodienthangsau" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sonuocthangtruoc" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sonuocthangsau" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sltaisan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tinhtrang" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gioitinh" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.phong_searchbytenphong" Method="phong_searchbytenphong">
+    <Parameter Name="tenphong" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="phong_searchbytenphongResult">
+      <Column Name="maphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="matang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="maloaiphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="slmax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sldango" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sodienthangtruoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sodienthangsau" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sonuocthangtruoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sonuocthangsau" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sltaisan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tinhtrang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gioitinh" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.phong_selectall" Method="phong_selectall">
+    <ElementType Name="phong_selectallResult">
+      <Column Name="maphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="matang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="maloaiphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="slmax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sldango" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sodienthangtruoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sodienthangsau" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sonuocthangtruoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sonuocthangsau" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sltaisan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tinhtrang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gioitinh" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.phong_selectbymaphong" Method="phong_selectbymaphong">
+    <Parameter Name="maphong" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="phong_selectbymaphongResult">
+      <Column Name="maphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="matang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="maloaiphong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="slmax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sldango" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sodienthangtruoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sodienthangsau" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sonuocthangtruoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sonuocthangsau" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sltaisan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tinhtrang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gioitinh" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>

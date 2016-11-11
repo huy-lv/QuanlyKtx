@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.Collections;
 
 namespace quanlyktx
 {
@@ -75,13 +76,22 @@ namespace quanlyktx
             //loadDBNV();
             dgvSinhVien.BeginInvoke(new MethodInvoker(loadDbSinhVien));
             dgvNhanVien.BeginInvoke(new MethodInvoker(loadDBNV));
+            dgvNhanVien.BeginInvoke(new MethodInvoker(loadDBPhong));
         }
 
         private void loadDbSinhVien()
         {
-            
             dgvSinhVien.DataSource = db.sinhvien_selectall();
+            addBindingSV();
+        }
 
+        /////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////
+
+        private void addBindingSV()
+        {
             tbMaSV.DataBindings.Clear();
             tbMaSV.DataBindings.Add("text", dgvSinhVien.DataSource, "masv");
             tbHoTenSV.DataBindings.Clear();
@@ -104,10 +114,7 @@ namespace quanlyktx
             tbThoiGianHoc.DataBindings.Add("text", dgvSinhVien.DataSource, "thoigianhoc");
             tbLop.DataBindings.Clear();
             tbLop.DataBindings.Add("text", dgvSinhVien.DataSource, "lop");
-
         }
-
-
 
         private void btThem_Click(object sender, EventArgs e)
         {
@@ -322,5 +329,78 @@ namespace quanlyktx
 
             }
         }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            IList r;
+            if (rbSearchSVById.Checked)
+            {
+                r = db.sinhvien_selectid(tbSearch.Text).ToList();
+            }
+            else if (rbSearchSVByName.Checked)
+            {
+                r = db.sinhvien_searchbyname(tbSearch.Text).ToList();
+            }else 
+            {
+                r = db.sinhvien_selectbymaphong(tbSearch.Text).ToList();
+            }
+            if (r.Count>0)
+            {
+                dgvSinhVien.DataSource = r;
+                addBindingSV();
+            }
+            else
+            {
+                Utils.showOkDialog(Utils.TITLE_INFO, "Không tìm thấy!");
+            }
+        }
+
+        private void btReset_Click(object sender, EventArgs e)
+        {
+            loadDbSinhVien();
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////
+
+        void loadDBPhong()
+        {
+            dgvPhong.DataSource = db.phong_selectall();
+        }
+
+        private void addBindingPhong()
+        {///////////////////////////////////////
+            phong_tbMaPhong.DataBindings.Clear();
+            phong_tbMaPhong.DataBindings.Add("text", dgvSinhVien.DataSource, "masv");
+            phong_tbTenPhong.DataBindings.Clear();
+            phong_tbTenPhong.DataBindings.Add("text", dgvSinhVien.DataSource, "hoten");
+            phong_tbMaTang.DataBindings.Clear();
+            tbMaPhong.DataBindings.Add("text", dgvSinhVien.DataSource, "maphong");
+            tbHoKhau.DataBindings.Clear();
+            tbHoKhau.DataBindings.Add("text", dgvSinhVien.DataSource, "hokhau");
+            tbGioiTinh.DataBindings.Clear();
+            tbGioiTinh.DataBindings.Add("text", dgvSinhVien.DataSource, "gioitinh");
+            tbNgaySinh.DataBindings.Clear();
+            tbNgaySinh.DataBindings.Add("text", dgvSinhVien.DataSource, "ngaysinh");
+            tbNgayDK.DataBindings.Clear();
+            tbNgayDK.DataBindings.Add("text", dgvSinhVien.DataSource, "ngaydangky");
+            tbTrangThai.DataBindings.Clear();
+            tbTrangThai.DataBindings.Add("text", dgvSinhVien.DataSource, "trangthai");
+            tbSdt.DataBindings.Clear();
+            tbSdt.DataBindings.Add("text", dgvSinhVien.DataSource, "sdt");
+            tbThoiGianHoc.DataBindings.Clear();
+            tbThoiGianHoc.DataBindings.Add("text", dgvSinhVien.DataSource, "thoigianhoc");
+            tbLop.DataBindings.Clear();
+            tbLop.DataBindings.Add("text", dgvSinhVien.DataSource, "lop");
+        }
+
+
+        private void btThemPhong_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

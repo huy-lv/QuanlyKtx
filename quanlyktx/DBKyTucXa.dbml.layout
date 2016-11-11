@@ -51,14 +51,14 @@
         <classShapeMoniker Id="11cc4780-3e31-406b-9d58-7bf1dc4538bf" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(1.75 : 5.4631982421875); (1.75 : 5.73159912109375); (6 : 5.73159912109375); (6 : 6.30930826822917); (8.75 : 6.30930826822917); (8.75 : 5.5); (9.91666666666667 : 5.5 : JumpStart); (10.0833333333333 : 5.5 : JumpEnd); (11.375 : 5.5); (11.375 : 5.73159912109375); (11.75 : 5.73159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(1.75 : 5.4631982421875); (1.75 : 5.73159912109375); (6 : 5.73159912109375); (6 : 6.30930826822917); (8.75 : 6.30930826822917); (8.75 : 5.5); (11.375 : 5.5); (11.375 : 5.73159912109375); (11.75 : 5.73159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/nhanvien/nhanvien_phieuthu" />
       <nodes>
         <classShapeMoniker Id="0ef49928-0f1f-409c-8edb-5c525f53c6bf" />
         <classShapeMoniker Id="131d10e0-a756-4027-8e9e-d7c8bba827a1" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.25 : 5.0625); (9.91666666666667 : 5.0625 : JumpStart); (10.0833333333333 : 5.0625 : JumpEnd); (11.75 : 5.0625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(8.25 : 5.0625); (11.75 : 5.0625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/phong/phong_phieuthu" />
       <nodes>
         <classShapeMoniker Id="d95c3197-b4a0-474d-8ee3-df2bb0888ec9" />
