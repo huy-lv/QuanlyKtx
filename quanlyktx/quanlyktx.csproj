@@ -62,10 +62,22 @@
     <Compile Include="AddNVDialog.Designer.cs">
       <DependentUpon>AddNVDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddPhongDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPhongDialog.Designer.cs">
+      <DependentUpon>AddPhongDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBKyTucXa.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DBKyTucXa.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EditPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPhong.Designer.cs">
+      <DependentUpon>EditPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils.cs" />
     <Compile Include="Form1.cs">
@@ -85,12 +97,18 @@
     <EmbeddedResource Include="AddNVDialog.resx">
       <DependentUpon>AddNVDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddPhongDialog.resx">
+      <DependentUpon>AddPhongDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddSVDialog.resx">
       <DependentUpon>AddSVDialog.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DBKyTucXa.dbml.layout">
       <DependentUpon>DBKyTucXa.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="EditPhong.resx">
+      <DependentUpon>EditPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

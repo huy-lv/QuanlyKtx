@@ -24,3 +24,16 @@ C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\bin\
 C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.AddSVDialog.resources
 C:\Users\HuyLV-CT\Documents\Visual Studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.AddNVDialog.resources
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\bin\Debug\quanlyktx.exe.config
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.exe
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.pdb
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\bin\Debug\quanlyktx.exe
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\bin\Debug\quanlyktx.pdb
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.csprojResolveAssemblyReference.cache
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.AddNVDialog.resources
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.AddSVDialog.resources
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.Form1.resources
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.Properties.Resources.resources
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.csproj.GenerateResource.Cache
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.AddPhongDialog.resources
+C:\Users\huylv\documents\visual studio 2015\Projects\QuanlyKtx\quanlyktx\obj\Debug\quanlyktx.EditPhong.resources

@@ -17,7 +17,8 @@ namespace quanlyktx
     {
 
         DataClasses1DataContext db = new DataClasses1DataContext();
-
+        int TIENDIEN = 0;
+        int TIENNUOC = 0;
 
         public Form1()
         {
@@ -77,8 +78,17 @@ namespace quanlyktx
             dgvSinhVien.BeginInvoke(new MethodInvoker(loadDbSinhVien));
             dgvNhanVien.BeginInvoke(new MethodInvoker(loadDBNV));
             dgvNhanVien.BeginInvoke(new MethodInvoker(loadDBPhong));
+            loadTienDienNuoc();
         }
 
+        void loadTienDienNuoc()
+        {
+            foreach(var r in db.quydinh_selectall())
+            {
+                TIENDIEN = r.tiendien;
+                TIENNUOC = r.tiennuoc;
+            }
+        }
         private void loadDbSinhVien()
         {
             dgvSinhVien.DataSource = db.sinhvien_selectall();
@@ -368,39 +378,89 @@ namespace quanlyktx
         void loadDBPhong()
         {
             dgvPhong.DataSource = db.phong_selectall();
+            addBindingPhong();
         }
 
         private void addBindingPhong()
-        {///////////////////////////////////////
+        {
             phong_tbMaPhong.DataBindings.Clear();
-            phong_tbMaPhong.DataBindings.Add("text", dgvSinhVien.DataSource, "masv");
+            phong_tbMaPhong.DataBindings.Add("text", dgvPhong.DataSource, "maphong");
             phong_tbTenPhong.DataBindings.Clear();
-            phong_tbTenPhong.DataBindings.Add("text", dgvSinhVien.DataSource, "hoten");
+            phong_tbTenPhong.DataBindings.Add("text", dgvPhong.DataSource, "tenphong");
             phong_tbMaTang.DataBindings.Clear();
-            tbMaPhong.DataBindings.Add("text", dgvSinhVien.DataSource, "maphong");
-            tbHoKhau.DataBindings.Clear();
-            tbHoKhau.DataBindings.Add("text", dgvSinhVien.DataSource, "hokhau");
-            tbGioiTinh.DataBindings.Clear();
-            tbGioiTinh.DataBindings.Add("text", dgvSinhVien.DataSource, "gioitinh");
-            tbNgaySinh.DataBindings.Clear();
-            tbNgaySinh.DataBindings.Add("text", dgvSinhVien.DataSource, "ngaysinh");
-            tbNgayDK.DataBindings.Clear();
-            tbNgayDK.DataBindings.Add("text", dgvSinhVien.DataSource, "ngaydangky");
-            tbTrangThai.DataBindings.Clear();
-            tbTrangThai.DataBindings.Add("text", dgvSinhVien.DataSource, "trangthai");
-            tbSdt.DataBindings.Clear();
-            tbSdt.DataBindings.Add("text", dgvSinhVien.DataSource, "sdt");
-            tbThoiGianHoc.DataBindings.Clear();
-            tbThoiGianHoc.DataBindings.Add("text", dgvSinhVien.DataSource, "thoigianhoc");
-            tbLop.DataBindings.Clear();
-            tbLop.DataBindings.Add("text", dgvSinhVien.DataSource, "lop");
-        }
+            phong_tbMaTang.DataBindings.Add("text", dgvPhong.DataSource, "matang");
+            phong_tbMaLoaiPhong.DataBindings.Clear();
+            phong_tbMaLoaiPhong.DataBindings.Add("text", dgvPhong.DataSource, "maloaiphong");
+            phong_tbSLMax.DataBindings.Clear();
+            phong_tbSLMax.DataBindings.Add("text", dgvPhong.DataSource, "slmax");
+            phong_tbSLDangO.DataBindings.Clear();
+            phong_tbSLDangO.DataBindings.Add("text", dgvPhong.DataSource, "sldango");
+            //phong_tbSoDien
+            int dien = Convert.ToInt32(dgvPhong.Rows[0].Cells[7].Value.ToString()) - Convert.ToInt32(dgvPhong.Rows[0].Cells[6].Value.ToString());
+            phong_tbSoDien.Text = dien.ToString();
+            int nuoc = Convert.ToInt32(dgvPhong.Rows[0].Cells[9].Value.ToString()) - Convert.ToInt32(dgvPhong.Rows[0].Cells[8].Value.ToString());
+            phong_tbSoNuoc.Text = nuoc.ToString();
+            phong_tbTienDien.Text = (dien * TIENDIEN).ToString();
+            phong_tbTienNuoc.Text = (nuoc * TIENNUOC).ToString();
 
+            phong_tbTinhTrang.DataBindings.Clear();
+            phong_tbTinhTrang.DataBindings.Add("text", dgvPhong.DataSource, "tinhtrang");
+            phong_tbGioiTinh.DataBindings.Clear();
+            phong_tbGioiTinh.DataBindings.Add("text", dgvPhong.DataSource, "gioitinh");
+            //tbThoiGianHoc.DataBindings.Clear();
+        }
+        public void addPhong(string s1,string s2,string s3, string s4,int i1,int i2,int i3,int i4,int i5,string s5,string s6)
+        {
+            db.phong_insert(s1, s2, s3, s4, i1, i2, i3, i4, i5, s5, s6);
+        }
+        public void editPhong(string s1,string s2,string s3,string s4,int i1,int i2, int i3, int i4, int i5, int i6, int i7,string s5, string s6)
+        {
+            db.phong_update(s1, s2, s3, s4, i1, i2, i3, i4, i5, i6, i7, s5, s6);
+        }
+        public void deletePhong(string s1)
+        {
+            db.phong_delete(s1);
+        }
 
         private void btThemPhong_Click(object sender, EventArgs e)
         {
-
+            AddPhongDialog addDialog = new AddPhongDialog();
+            addDialog.ShowDialog();
         }
 
+        private void btSuaPhong_Click(object sender, EventArgs e)
+        {
+            EditPhong editDialog = new EditPhong();
+            editDialog.add_tbMaPhong.Text = phong_tbMaPhong.Text;
+            editDialog.add_tbTenPhong.Text = phong_tbTenPhong.Text;
+            editDialog.add_tbMaTang.Text = phong_tbMaTang.Text;
+            editDialog.add_tbMaLoaiPhong.Text = phong_tbMaLoaiPhong.Text;
+            editDialog.add_tbSLMax.Text = phong_tbSLMax.Text;
+            editDialog.add_tbSLDangO.Text = phong_tbSLDangO.Text;
+
+            foreach (var r in db.phong_selectbymaphong(phong_tbMaPhong.Text)) {
+                editDialog.add_tbSoDienThangTruoc.Text = r.sodienthangtruoc.ToString();
+                editDialog.add_tbSoDienThangSau.Text = r.sodienthangsau.ToString();
+                editDialog.add_tbSoNuocThangTruoc.Text = r.sonuocthangtruoc.ToString();
+                editDialog.add_tbSoNuocThangSau.Text = r.sonuocthangsau.ToString();
+                editDialog.add_tbSLTaiSan.Text = r.sltaisan.ToString();
+            }
+            editDialog.add_tbTinhTrang.Text = phong_tbTinhTrang.Text;
+            editDialog.add_tbGioiTinh.Text = phong_tbGioiTinh.Text;
+
+            editDialog.ShowDialog();
+        }
+
+        private void dgvPhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dgvPhong.CurrentCell.RowIndex;
+            int dien = Convert.ToInt32(dgvPhong.Rows[i].Cells[7].Value.ToString()) - Convert.ToInt32(dgvPhong.Rows[i].Cells[6].Value.ToString());
+            int nuoc = Convert.ToInt32(dgvPhong.Rows[i].Cells[9].Value.ToString()) - Convert.ToInt32(dgvPhong.Rows[i].Cells[8].Value.ToString());
+            phong_tbSoDien.Text = dien.ToString();
+            phong_tbSoNuoc.Text = nuoc.ToString();
+
+            phong_tbTienDien.Text = (dien * TIENDIEN).ToString();
+            phong_tbTienNuoc.Text = (nuoc * TIENNUOC).ToString();
+        }
     }
 }

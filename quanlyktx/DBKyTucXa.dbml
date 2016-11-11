@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="kytucxa" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-8ODLR1U\SQLEXPRESS;Initial Catalog=kytucxa;Integrated Security=True" SettingsObjectName="quanlyktx.Properties.Settings" SettingsPropertyName="kytucxaConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-6LL873M\SQLEXPRESS;Initial Catalog=kytucxa;Integrated Security=True" SettingsObjectName="quanlyktx.Properties.Settings" SettingsPropertyName="kytucxaConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.loaiphong" Member="loaiphongs">
     <Type Name="loaiphong">
       <Column Name="maloaiphong" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -245,38 +245,6 @@
     <Parameter Name="maphong" Type="System.String" DbType="NVarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.phong_update" Method="phong_update">
-    <Parameter Name="maphong" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tenphong" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="matang" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="maloaiphong" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="slmax" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sldango" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sodienthangtruoc" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sodienthangsau" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sonuocthangtruoc" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sonuocthangsau" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sltaisan" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tinhtrang" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="gioitinh" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.phong_insert" Method="phong_insert">
-    <Parameter Name="maphong" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tenphong" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="matang" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="maloaiphong" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="slmax" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sldango" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sodienthangtruoc" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sodienthangsau" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sonuocthangtruoc" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sonuocthangsau" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="sltaisan" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="tinhtrang" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="gioitinh" Type="System.String" DbType="NVarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.phong_searchbytenphong" Method="phong_searchbytenphong">
     <Parameter Name="tenphong" Type="System.String" DbType="NVarChar(50)" />
     <ElementType Name="phong_searchbytenphongResult">
@@ -328,6 +296,42 @@
       <Column Name="sltaisan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="tinhtrang" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="gioitinh" Type="System.String" DbType="NVarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.phong_insert" Method="phong_insert">
+    <Parameter Name="maphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tenphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="matang" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maloaiphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="slmax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sldango" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sodienthangtruoc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sonuocthangtruoc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sltaisan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tinhtrang" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gioitinh" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.phong_update" Method="phong_update">
+    <Parameter Name="maphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tenphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="matang" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="maloaiphong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="slmax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sldango" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sodienthangtruoc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sodienthangsau" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sonuocthangtruoc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sonuocthangsau" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sltaisan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tinhtrang" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gioitinh" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.quydinh_selectall" Method="quydinh_selectall">
+    <ElementType Name="quydinh_selectallResult">
+      <Column Name="tiendien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tiennuoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
 </Database>

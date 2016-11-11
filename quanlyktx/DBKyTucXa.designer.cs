@@ -237,20 +237,6 @@ namespace quanlyktx
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.phong_update")]
-		public int phong_update([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string matang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maloaiphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string slmax, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sldango, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sodienthangtruoc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sodienthangsau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sonuocthangtruoc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sonuocthangsau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sltaisan, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tinhtrang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string gioitinh)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maphong, tenphong, matang, maloaiphong, slmax, sldango, sodienthangtruoc, sodienthangsau, sonuocthangtruoc, sonuocthangsau, sltaisan, tinhtrang, gioitinh);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.phong_insert")]
-		public int phong_insert([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string matang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maloaiphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string slmax, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sldango, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sodienthangtruoc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sodienthangsau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sonuocthangtruoc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sonuocthangsau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string sltaisan, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tinhtrang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string gioitinh)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maphong, tenphong, matang, maloaiphong, slmax, sldango, sodienthangtruoc, sodienthangsau, sonuocthangtruoc, sonuocthangsau, sltaisan, tinhtrang, gioitinh);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.phong_searchbytenphong")]
 		public ISingleResult<phong_searchbytenphongResult> phong_searchbytenphong([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenphong)
 		{
@@ -270,6 +256,27 @@ namespace quanlyktx
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maphong);
 			return ((ISingleResult<phong_selectbymaphongResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.phong_insert")]
+		public int phong_insert([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string matang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maloaiphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> slmax, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sldango, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sodienthangtruoc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sonuocthangtruoc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sltaisan, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tinhtrang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string gioitinh)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maphong, tenphong, matang, maloaiphong, slmax, sldango, sodienthangtruoc, sonuocthangtruoc, sltaisan, tinhtrang, gioitinh);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.phong_update")]
+		public int phong_update([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tenphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string matang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string maloaiphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> slmax, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sldango, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sodienthangtruoc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sodienthangsau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sonuocthangtruoc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sonuocthangsau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> sltaisan, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tinhtrang, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string gioitinh)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maphong, tenphong, matang, maloaiphong, slmax, sldango, sodienthangtruoc, sodienthangsau, sonuocthangtruoc, sonuocthangsau, sltaisan, tinhtrang, gioitinh);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.quydinh_selectall")]
+		public ISingleResult<quydinh_selectallResult> quydinh_selectall()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<quydinh_selectallResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -4085,6 +4092,50 @@ namespace quanlyktx
 				if ((this._gioitinh != value))
 				{
 					this._gioitinh = value;
+				}
+			}
+		}
+	}
+	
+	public partial class quydinh_selectallResult
+	{
+		
+		private int _tiendien;
+		
+		private int _tiennuoc;
+		
+		public quydinh_selectallResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tiendien", DbType="Int NOT NULL")]
+		public int tiendien
+		{
+			get
+			{
+				return this._tiendien;
+			}
+			set
+			{
+				if ((this._tiendien != value))
+				{
+					this._tiendien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tiennuoc", DbType="Int NOT NULL")]
+		public int tiennuoc
+		{
+			get
+			{
+				return this._tiennuoc;
+			}
+			set
+			{
+				if ((this._tiennuoc != value))
+				{
+					this._tiennuoc = value;
 				}
 			}
 		}
